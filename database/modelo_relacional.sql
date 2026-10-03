@@ -1,7 +1,19 @@
 PRAGMA foreign_keys = ON;
 
--- Modelo relacional del sistema VICMA
+-- H3 Tarea 3 - Modelo relacional del sistema VICMA
+-- Repositorio: beljin34/VICMA
+-- Rama: feature/modelo-relacional-sql
 -- Base compatible con SQLite
+-- Relaciones principales:
+-- administradores 1:N camaras_ip
+-- camaras_ip 1:N flujos_video
+-- flujos_video 1:N fotogramas
+-- fotogramas 1:N detecciones
+-- personas 1:N seguimientos
+-- camaras_ip 1:N seguimientos
+-- seguimientos 1:N trayectorias
+-- trayectorias 1:N puntos_trayectoria
+-- seguimientos 1:N conductas
 
 CREATE TABLE administradores (
     id_administrador INTEGER PRIMARY KEY AUTOINCREMENT,
